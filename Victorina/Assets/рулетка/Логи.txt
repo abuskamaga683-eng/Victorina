@@ -1,0 +1,810 @@
+[Bootstrapper] Awake — старт инициализации
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:30)
+
+[DatabaseService] Путь к БД: C:/Users/desig/Victorina/Assets\Data\victorina.db
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:.ctor () (at Assets/Scripts/Data/DatabaseService.cs:29)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:42)
+
+[DatabaseService] Initialize — создание таблиц
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:Initialize () (at Assets/Scripts/Data/DatabaseService.cs:34)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:43)
+
+[DatabaseService] ✓ Таблица questions создана/существует
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:Initialize () (at Assets/Scripts/Data/DatabaseService.cs:45)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:43)
+
+[ServiceContainer] ✓ Зарегистрирован: IDatabaseService
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Register<Victorina.Core.Interfaces.IDatabaseService> (Victorina.Core.Interfaces.IDatabaseService) (at Assets/Scripts/Infrastructure/ServiceContainer.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:44)
+
+[Bootstrapper] ✓ DatabaseService инициализирован
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:45)
+
+[ServiceContainer] Resolve<IDatabaseService> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.IDatabaseService> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:51)
+
+[ServiceContainer] ✓ Зарегистрирован: IQuestionRepository
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Register<Victorina.Core.Interfaces.IQuestionRepository> (Victorina.Core.Interfaces.IQuestionRepository) (at Assets/Scripts/Infrastructure/ServiceContainer.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:52)
+
+[Bootstrapper] ✓ QuestionRepository зарегистрирован
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:53)
+
+[ServiceContainer] Resolve<IQuestionRepository> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.IQuestionRepository> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:59)
+
+[DataSeeder] SeedIfEmpty — проверка вопросов
+UnityEngine.Debug:Log (object)
+Victorina.Data.DataSeeder:SeedIfEmpty () (at Assets/Scripts/Data/DataSeeder.cs:18)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:59)
+
+[QuestionRepository] GetAll — запрос всех вопросов
+UnityEngine.Debug:Log (object)
+Victorina.Data.QuestionRepository:GetAll () (at Assets/Scripts/Data/QuestionRepository.cs:17)
+Victorina.Data.DataSeeder:SeedIfEmpty () (at Assets/Scripts/Data/DataSeeder.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:59)
+
+[DatabaseService] ExecuteQuery SQL: SELECT id, pool_index, text, answer FROM questions ORDER BY id
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:ExecuteQuery<Victorina.Core.Models.Question> (string,System.Func`2<System.Data.IDataRecord, Victorina.Core.Models.Question>,System.ValueTuple`2<string, object>[]) (at Assets/Scripts/Data/DatabaseService.cs:93)
+Victorina.Data.QuestionRepository:GetAll () (at Assets/Scripts/Data/QuestionRepository.cs:18)
+Victorina.Data.DataSeeder:SeedIfEmpty () (at Assets/Scripts/Data/DataSeeder.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:59)
+
+[DatabaseService] ExecuteQuery вернул 17 строк
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:ExecuteQuery<Victorina.Core.Models.Question> (string,System.Func`2<System.Data.IDataRecord, Victorina.Core.Models.Question>,System.ValueTuple`2<string, object>[]) (at Assets/Scripts/Data/DatabaseService.cs:106)
+Victorina.Data.QuestionRepository:GetAll () (at Assets/Scripts/Data/QuestionRepository.cs:18)
+Victorina.Data.DataSeeder:SeedIfEmpty () (at Assets/Scripts/Data/DataSeeder.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:59)
+
+[QuestionRepository] GetAll вернул 17 вопросов
+UnityEngine.Debug:Log (object)
+Victorina.Data.QuestionRepository:GetAll () (at Assets/Scripts/Data/QuestionRepository.cs:21)
+Victorina.Data.DataSeeder:SeedIfEmpty () (at Assets/Scripts/Data/DataSeeder.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:59)
+
+[DataSeeder] Вопросов в БД: 17
+UnityEngine.Debug:Log (object)
+Victorina.Data.DataSeeder:SeedIfEmpty () (at Assets/Scripts/Data/DataSeeder.cs:20)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:59)
+
+[DataSeeder] БД уже заполнена, пропускаем
+UnityEngine.Debug:Log (object)
+Victorina.Data.DataSeeder:SeedIfEmpty () (at Assets/Scripts/Data/DataSeeder.cs:36)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:59)
+
+[Bootstrapper] ✓ DataSeeder выполнен
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:60)
+
+[ServiceContainer] Resolve<IQuestionRepository> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.IQuestionRepository> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:66)
+
+[SessionService] Создан
+UnityEngine.Debug:Log (object)
+Victorina.Services.SessionService:.ctor (Victorina.Core.Interfaces.IQuestionRepository) (at Assets/Scripts/Services/SessionService.cs:21)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:66)
+
+[ServiceContainer] ✓ Зарегистрирован: ISessionService
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Register<Victorina.Core.Interfaces.ISessionService> (Victorina.Core.Interfaces.ISessionService) (at Assets/Scripts/Infrastructure/ServiceContainer.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:66)
+
+[Bootstrapper] ✓ SessionService зарегистрирован
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:68)
+
+[ServiceContainer] ✓ Зарегистрирован: IRouletteService
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Register<Victorina.Core.Interfaces.IRouletteService> (Victorina.Core.Interfaces.IRouletteService) (at Assets/Scripts/Infrastructure/ServiceContainer.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:74)
+
+[Bootstrapper] ✓ RouletteService зарегистрирован
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:75)
+
+[Navigator] Создан. mainMenu=Panel_MainMenu teamSetup=Panel_TeamSetup game=Panel_Game admin=Panel_Admin gameOver=Panel_GameOver
+UnityEngine.Debug:Log (object)
+Victorina.Services.SceneNavigator:.ctor (UnityEngine.GameObject,UnityEngine.GameObject,UnityEngine.GameObject,UnityEngine.GameObject,UnityEngine.GameObject) (at Assets/Scripts/Services/SceneNavigator.cs:22)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:81)
+
+[ServiceContainer] ✓ Зарегистрирован: ISceneNavigator
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Register<Victorina.Core.Interfaces.ISceneNavigator> (Victorina.Core.Interfaces.ISceneNavigator) (at Assets/Scripts/Infrastructure/ServiceContainer.cs:19)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:84)
+
+[Bootstrapper] ✓ SceneNavigator зарегистрирован
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:85)
+
+[Navigator] → GoToMainMenu
+UnityEngine.Debug:Log (object)
+Victorina.Services.SceneNavigator:GoToMainMenu () (at Assets/Scripts/Services/SceneNavigator.cs:25)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:87)
+
+[Navigator] Show(Panel_MainMenu) — скрываю остальные
+UnityEngine.Debug:Log (object)
+Victorina.Services.SceneNavigator:Show (UnityEngine.GameObject) (at Assets/Scripts/Services/SceneNavigator.cs:34)
+Victorina.Services.SceneNavigator:GoToMainMenu () (at Assets/Scripts/Services/SceneNavigator.cs:25)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:87)
+
+[Navigator] ✓ Активна панель: Panel_MainMenu
+UnityEngine.Debug:Log (object)
+Victorina.Services.SceneNavigator:Show (UnityEngine.GameObject) (at Assets/Scripts/Services/SceneNavigator.cs:41)
+Victorina.Services.SceneNavigator:GoToMainMenu () (at Assets/Scripts/Services/SceneNavigator.cs:25)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:87)
+
+[Bootstrapper] ✓ GoToMainMenu вызван
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:88)
+
+[Bootstrapper] ✓ Инициализация завершена успешно
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.GameBootstrapper:Awake () (at Assets/Scripts/Infrastructure/GameBootstrapper.cs:92)
+
+[GameOverView] OnEnable
+UnityEngine.Debug:Log (object)
+Victorina.UI.GameOverView:OnEnable () (at Assets/Scripts/UI/GameOverView.cs:45)
+
+[AdminPanelView] OnEnable
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:OnEnable () (at Assets/Scripts/UI/AdminPanelView.cs:65)
+
+[QuestionEditorView] Awake
+UnityEngine.Debug:Log (object)
+Victorina.UI.QuestionEditorView:Awake () (at Assets/Scripts/UI/QuestionEditorView.cs:37)
+
+[ServiceContainer] Resolve<IQuestionRepository> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.IQuestionRepository> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.QuestionEditorView:Awake () (at Assets/Scripts/UI/QuestionEditorView.cs:52)
+
+[QuestionEditorView] ✓ Awake завершён
+UnityEngine.Debug:Log (object)
+Victorina.UI.QuestionEditorView:Awake () (at Assets/Scripts/UI/QuestionEditorView.cs:57)
+
+[RouletteView] OnEnable
+UnityEngine.Debug:Log (object)
+Victorina.UI.RouletteView:OnEnable () (at Assets/Scripts/UI/RouletteView.cs:62)
+
+[MainMenuView] Start
+UnityEngine.Debug:Log (object)
+Victorina.UI.MainMenuView:Start () (at Assets/Scripts/UI/MainMenuView.cs:23)
+
+[ServiceContainer] Resolve<ISceneNavigator> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.ISceneNavigator> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.MainMenuView:Start () (at Assets/Scripts/UI/MainMenuView.cs:28)
+
+[MainMenuView] ✓ Start завершён
+UnityEngine.Debug:Log (object)
+Victorina.UI.MainMenuView:Start () (at Assets/Scripts/UI/MainMenuView.cs:34)
+
+[GameOverView] Start
+UnityEngine.Debug:Log (object)
+Victorina.UI.GameOverView:Start () (at Assets/Scripts/UI/GameOverView.cs:27)
+
+[ServiceContainer] Resolve<ISessionService> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.ISessionService> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.GameOverView:Start () (at Assets/Scripts/UI/GameOverView.cs:32)
+
+[ServiceContainer] Resolve<ISceneNavigator> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.ISceneNavigator> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.GameOverView:Start () (at Assets/Scripts/UI/GameOverView.cs:34)
+
+[GameOverView] ✓ Start завершён
+UnityEngine.Debug:Log (object)
+Victorina.UI.GameOverView:Start () (at Assets/Scripts/UI/GameOverView.cs:39)
+
+[GameOverView] Refresh
+UnityEngine.Debug:Log (object)
+Victorina.UI.GameOverView:Refresh () (at Assets/Scripts/UI/GameOverView.cs:51)
+Victorina.UI.GameOverView:Start () (at Assets/Scripts/UI/GameOverView.cs:40)
+
+[GameOverView] ✓ Победитель: , команд: 0
+UnityEngine.Debug:Log (object)
+Victorina.UI.GameOverView:Refresh () (at Assets/Scripts/UI/GameOverView.cs:60)
+Victorina.UI.GameOverView:Start () (at Assets/Scripts/UI/GameOverView.cs:40)
+
+[AdminPanelView] Start
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:40)
+
+[ServiceContainer] Resolve<IQuestionRepository> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.IQuestionRepository> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:48)
+
+[ServiceContainer] Resolve<ISceneNavigator> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.ISceneNavigator> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:50)
+
+[AdminPanelView] ✓ Start завершён
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:59)
+
+[AdminPanelView] Activate
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:71)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] Фильтр категорий заполнен
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:PopulateSectorFilter () (at Assets/Scripts/UI/AdminPanelView.cs:90)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:73)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] Фильтр: index=1 sectorIndex=0
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:105)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] Refresh START — фильтр: 0
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:111)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] Запрос GetByPool(0)
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:132)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[QuestionRepository] GetByPool(0) — запрос вопросов из пула
+UnityEngine.Debug:Log (object)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:27)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[DatabaseService] ExecuteQuery SQL: SELECT id, pool_index, text, answer FROM questions WHERE pool_index = @pid ORDER BY id
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:ExecuteQuery<Victorina.Core.Models.Question> (string,System.Func`2<System.Data.IDataRecord, Victorina.Core.Models.Question>,System.ValueTuple`2<string, object>[]) (at Assets/Scripts/Data/DatabaseService.cs:93)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:28)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[DatabaseService] Параметры: (@pid, 0)
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:ExecuteQuery<Victorina.Core.Models.Question> (string,System.Func`2<System.Data.IDataRecord, Victorina.Core.Models.Question>,System.ValueTuple`2<string, object>[]) (at Assets/Scripts/Data/DatabaseService.cs:95)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:28)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[DatabaseService] ExecuteQuery вернул 15 строк
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:ExecuteQuery<Victorina.Core.Models.Question> (string,System.Func`2<System.Data.IDataRecord, Victorina.Core.Models.Question>,System.ValueTuple`2<string, object>[]) (at Assets/Scripts/Data/DatabaseService.cs:106)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:28)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[QuestionRepository] GetByPool(0) вернул 15 вопросов
+UnityEngine.Debug:Log (object)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:32)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] ✓ Получено вопросов: 15
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:142)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=265 lineCount=4 lineHeight=20 totalHeight=80
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=92 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=103 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=169 lineCount=3 lineHeight=20 totalHeight=60
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=36 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=145 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=107 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=196 lineCount=3 lineHeight=20 totalHeight=60
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=67 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=67 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=70 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=108 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=314 lineCount=4 lineHeight=20 totalHeight=80
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=50 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=73 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] Refresh END — отрисовано 15 строк
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:151)
+Victorina.UI.AdminPanelView:OnFilterChanged (int) (at Assets/Scripts/UI/AdminPanelView.cs:106)
+UnityEngine.Events.UnityEvent`1<int>:Invoke (int)
+TMPro.TMP_Dropdown:SetValue (int,bool) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:451)
+TMPro.TMP_Dropdown:set_value (int) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/TMP/TMP_Dropdown.cs:422)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:77)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] Refresh START — фильтр: 0
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:111)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] Запрос GetByPool(0)
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:132)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[QuestionRepository] GetByPool(0) — запрос вопросов из пула
+UnityEngine.Debug:Log (object)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:27)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[DatabaseService] ExecuteQuery SQL: SELECT id, pool_index, text, answer FROM questions WHERE pool_index = @pid ORDER BY id
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:ExecuteQuery<Victorina.Core.Models.Question> (string,System.Func`2<System.Data.IDataRecord, Victorina.Core.Models.Question>,System.ValueTuple`2<string, object>[]) (at Assets/Scripts/Data/DatabaseService.cs:93)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:28)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[DatabaseService] Параметры: (@pid, 0)
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:ExecuteQuery<Victorina.Core.Models.Question> (string,System.Func`2<System.Data.IDataRecord, Victorina.Core.Models.Question>,System.ValueTuple`2<string, object>[]) (at Assets/Scripts/Data/DatabaseService.cs:95)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:28)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[DatabaseService] ExecuteQuery вернул 15 строк
+UnityEngine.Debug:Log (object)
+Victorina.Data.DatabaseService:ExecuteQuery<Victorina.Core.Models.Question> (string,System.Func`2<System.Data.IDataRecord, Victorina.Core.Models.Question>,System.ValueTuple`2<string, object>[]) (at Assets/Scripts/Data/DatabaseService.cs:106)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:28)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[QuestionRepository] GetByPool(0) вернул 15 вопросов
+UnityEngine.Debug:Log (object)
+Victorina.Data.QuestionRepository:GetByPool (int) (at Assets/Scripts/Data/QuestionRepository.cs:32)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:133)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] ✓ Получено вопросов: 15
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:142)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=265 lineCount=4 lineHeight=20 totalHeight=80
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=92 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=103 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=169 lineCount=3 lineHeight=20 totalHeight=60
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=36 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=145 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=107 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=196 lineCount=3 lineHeight=20 totalHeight=60
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=67 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=67 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=70 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=108 lineCount=2 lineHeight=20 totalHeight=40
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=314 lineCount=4 lineHeight=20 totalHeight=80
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=50 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[Row] textLen=73 lineCount=1 lineHeight=20 totalHeight=20
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminQuestionRow:ApplyHeight () (at Assets/Scripts/UI/AdminQuestionRow.cs:41)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:148)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[AdminPanelView] Refresh END — отрисовано 15 строк
+UnityEngine.Debug:Log (object)
+Victorina.UI.AdminPanelView:Refresh () (at Assets/Scripts/UI/AdminPanelView.cs:151)
+Victorina.UI.AdminPanelView:Activate () (at Assets/Scripts/UI/AdminPanelView.cs:78)
+Victorina.UI.AdminPanelView:Start () (at Assets/Scripts/UI/AdminPanelView.cs:60)
+
+[TeamSetupView] Start
+UnityEngine.Debug:Log (object)
+Victorina.UI.TeamSetupView:Start () (at Assets/Scripts/UI/TeamSetupView.cs:36)
+
+[ServiceContainer] Resolve<ISessionService> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.ISessionService> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.TeamSetupView:Start () (at Assets/Scripts/UI/TeamSetupView.cs:44)
+
+[ServiceContainer] Resolve<ISceneNavigator> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.ISceneNavigator> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.TeamSetupView:Start () (at Assets/Scripts/UI/TeamSetupView.cs:46)
+
+[TeamSetupView] UpdateVisibility: activeCount=2
+UnityEngine.Debug:Log (object)
+Victorina.UI.TeamSetupView:UpdateVisibility () (at Assets/Scripts/UI/TeamSetupView.cs:78)
+Victorina.UI.TeamSetupView:Start () (at Assets/Scripts/UI/TeamSetupView.cs:54)
+
+[TeamSetupView] ✓ Start завершён
+UnityEngine.Debug:Log (object)
+Victorina.UI.TeamSetupView:Start () (at Assets/Scripts/UI/TeamSetupView.cs:55)
+
+[RouletteView] Start
+UnityEngine.Debug:Log (object)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:40)
+
+[ServiceContainer] Resolve<ISessionService> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.ISessionService> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:47)
+
+[ServiceContainer] Resolve<IRouletteService> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.IRouletteService> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:49)
+
+[ServiceContainer] Resolve<ISceneNavigator> ✓
+UnityEngine.Debug:Log (object)
+Victorina.Infrastructure.ServiceContainer:Resolve<Victorina.Core.Interfaces.ISceneNavigator> () (at Assets/Scripts/Infrastructure/ServiceContainer.cs:26)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:51)
+
+[RouletteView] ✓ Start завершён
+UnityEngine.Debug:Log (object)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:56)
+
+[RouletteView] Activate
+UnityEngine.Debug:Log (object)
+Victorina.UI.RouletteView:Activate () (at Assets/Scripts/UI/RouletteView.cs:68)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:57)
+
+[GameFlowController] ResetTurn: очерёдность сброшена
+UnityEngine.Debug:Log (object)
+Victorina.UI.GameFlowController:ResetTurn () (at Assets/Scripts/UI/GameFlowController.cs:54)
+Victorina.UI.RouletteView:Activate () (at Assets/Scripts/UI/RouletteView.cs:72)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:57)
+
+[RouletteWheelView] RefreshWheel
+UnityEngine.Debug:Log (object)
+Victorina.UI.RouletteWheelView:RefreshWheel () (at Assets/Scripts/UI/RouletteWheelView.cs:42)
+Victorina.UI.RouletteView:Activate () (at Assets/Scripts/UI/RouletteView.cs:73)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:57)
+
+[ScoreboardView] Refresh: команд=0
+UnityEngine.Debug:Log (object)
+Victorina.UI.ScoreboardView:Refresh (System.Collections.Generic.IReadOnlyList`1<Victorina.Core.Models.Team>) (at Assets/Scripts/UI/ScoreboardView.cs:32)
+Victorina.UI.RouletteView:Activate () (at Assets/Scripts/UI/RouletteView.cs:74)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:57)
+
+[RouletteView] ✓ Activate завершён
+UnityEngine.Debug:Log (object)
+Victorina.UI.RouletteView:Activate () (at Assets/Scripts/UI/RouletteView.cs:75)
+Victorina.UI.RouletteView:Start () (at Assets/Scripts/UI/RouletteView.cs:57)
+
+[AnswerPanelView] Start
+UnityEngine.Debug:Log (object)
+Victorina.UI.AnswerPanelView:Start () (at Assets/Scripts/UI/AnswerPanelView.cs:22)
+
+[AnswerPanelView] ✓ Start завершён
+UnityEngine.Debug:Log (object)
+Victorina.UI.AnswerPanelView:Start () (at Assets/Scripts/UI/AnswerPanelView.cs:29)
+
+[ScoreboardView] MarqueeLoop: contentW=0 viewportW=1700
+UnityEngine.Debug:Log (object)
+Victorina.UI.ScoreboardView/<MarqueeLoop>d__7:MoveNext () (at Assets/Scripts/UI/ScoreboardView.cs:69)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+[ScoreboardView] MarqueeLoop: контент помещается, скролл не нужен
+UnityEngine.Debug:Log (object)
+Victorina.UI.ScoreboardView/<MarqueeLoop>d__7:MoveNext () (at Assets/Scripts/UI/ScoreboardView.cs:74)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+[MainMenuView] Нажато: Администрирование
+UnityEngine.Debug:Log (object)
+Victorina.UI.MainMenuView:OnAdmin () (at Assets/Scripts/UI/MainMenuView.cs:38)
+UnityEngine.EventSystems.EventSystem:Update () (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:514)
+
+[Navigator] → GoToAdmin
+UnityEngine.Debug:Log (object)
+Victorina.Services.SceneNavigator:GoToAdmin () (at Assets/Scripts/Services/SceneNavigator.cs:28)
+Victorina.UI.MainMenuView:OnAdmin () (at Assets/Scripts/UI/MainMenuView.cs:38)
+UnityEngine.EventSystems.EventSystem:Update () (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:514)
+
+[Navigator] Show(Panel_Admin) — скрываю остальные
+UnityEngine.Debug:Log (object)
+Victorina.Services.SceneNavigator:Show (UnityEngine.GameObject) (at Assets/Scripts/Services/SceneNavigator.cs:34)
+Victorina.Services.SceneNavigator:GoToAdmin () (at Assets/Scripts/Services/SceneNavigator.cs:28)
+Victorina.UI.MainMenuView:OnAdmin () (at Assets/Scripts/UI/MainMenuView.cs:38)
+UnityEngine.EventSystems.EventSystem:Update () (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:514)
+
+[Navigator] ✓ Активна панель: Panel_Admin
+UnityEngine.Debug:Log (object)
+Victorina.Services.SceneNavigator:Show (UnityEngine.GameObject) (at Assets/Scripts/Services/SceneNavigator.cs:41)
+Victorina.Services.SceneNavigator:GoToAdmin () (at Assets/Scripts/Services/SceneNavigator.cs:28)
+Victorina.UI.MainMenuView:OnAdmin () (at Assets/Scripts/UI/MainMenuView.cs:38)
+UnityEngine.EventSystems.EventSystem:Update () (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:514)
+
